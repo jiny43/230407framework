@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>현재 시각: <span id="time"></span></h1>
+    <script>
+      function updateTime() {
+        const date = new Date();
+        const hour = date.getHours();
+        const minute = date.getMinutes();
+        const second = date.getSeconds();
+        const year = date.getFullYear();
+        const day = date.getDate();
+        const month = date.getMonth();
+        const timeString = year + "년" + month + "월" + day + "일 " + hour + ":" + minute + ":" + second;
+        document.getElementById("time").textContent = timeString;
+      }
+  
+      setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
+
+
